@@ -1,8 +1,9 @@
+import AppRoutes from './AppRoutes';
 import './assets/css/main.css';
 
 function App() {
 	return (
-		<h1>Hello World</h1>
+		<AppRoutes />
 	);
 }
 

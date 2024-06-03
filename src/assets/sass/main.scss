@@ -1,1 +1,5 @@
-@import './config';
+@import './config', './mixins', './pages/home';
+
+body {
+    color: $light_blue;
+}

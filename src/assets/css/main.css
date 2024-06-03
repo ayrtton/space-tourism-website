@@ -1,5 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+* a {
+  text-decoration: none;
+}
+
+.home {
+  display: flex;
+  height: 100vh;
+  width: auto;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100dvh;
+  background-image: url("../images/home/background-home-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.home .hero {
+  display: flex;
+  height: auto;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15vh;
+}
+.home .hero__content {
+  width: 47%;
+}
+.home .hero__content-message {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.7vw;
+  font-weight: 200;
+  letter-spacing: 0.32vw;
+}
+.home .hero__content-title {
+  padding: 1.8vh 0 2vh;
+  font-family: "Bellefair", sans-serif;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  font-size: 9.5vw;
+  font-weight: 500;
+}
+.home .hero__content-text {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.15vw;
+  font-weight: 300;
+  letter-spacing: 0.04vw;
+  line-height: 170%;
+}
+.home .hero__button {
+  display: flex;
+  height: auto;
+  width: 25%;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: hsl(0, 0%, 100%);
+  transition: 1s;
+  outline: 0 solid rgba(255, 255, 255, 0.7);
+  color: hsl(230, 35%, 7%);
+  font-family: "Bellefair", sans-serif;
+  font-size: 2.2vw;
+  text-transform: uppercase;
+  padding-top: 1vh;
+}
+.home .hero__button:hover {
+  outline: 6vw solid rgba(255, 255, 255, 0.3);
+  color: hsla(230, 35%, 7%, 0.7);
+  cursor: pointer;
+}
+
+body {
+  color: hsl(231, 77%, 90%);
 }/*# sourceMappingURL=main.css.map */
