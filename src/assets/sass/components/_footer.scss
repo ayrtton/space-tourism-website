@@ -1,0 +1,19 @@
+.attribution {
+    @include flexbox(14vh, 100%, column, center, center);
+    font-size: calc(1.45vh + .3rem);
+    gap: 1vh;
+    text-align: center;
+    background-color: $very_dark_navy;
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: .2vh;
+
+    &__link {
+        text-decoration: none;
+        transition: .5s;
+        color: $blue;
+
+        &:hover {
+            color: $light_blue;
+        }
+    }
+}

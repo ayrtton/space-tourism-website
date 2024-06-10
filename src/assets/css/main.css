@@ -138,6 +138,29 @@
     font-size: 0.85rem;
   }
 }
+.attribution {
+  display: flex;
+  height: 14vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(1.45vh + 0.3rem);
+  gap: 1vh;
+  text-align: center;
+  background-color: hsl(230, 35%, 7%);
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 0.2vh;
+}
+.attribution__link {
+  text-decoration: none;
+  transition: 0.5s;
+  color: hsl(231, 77%, 80%);
+}
+.attribution__link:hover {
+  color: hsl(231, 77%, 90%);
+}
+
 body {
   color: hsl(231, 77%, 90%);
 }/*# sourceMappingURL=main.css.map */
