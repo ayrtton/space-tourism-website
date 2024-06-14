@@ -1,0 +1,51 @@
+.nav {
+    @include flexbox(12vh, 100%, row, space-between, center);
+    position: absolute;
+    top: 5vh;
+
+    .logo {
+        @include flexbox(100%, 15%, row, center);
+
+        &__image {
+            height: 55%;
+        }
+    }
+
+    .menu {
+        @include flexbox(100%, 55%);
+        padding-left: 12vw;
+        list-style: none;
+        background-color: rgba(255, 255, 255, .05);
+        backdrop-filter: blur(20px);
+
+        &__item {
+            height: 100%;
+
+            &-link {
+                @include flexbox(100%);
+                gap: .6vw;
+                color: $white;
+                font-family: 'Barlow Condensed', sans-serif;
+                text-transform: uppercase;
+                font-size: calc(1.45vh + .3rem);
+                letter-spacing: .45vh;
+                border-bottom: .45vh solid transparent;
+                padding-top: .45vh;
+            }
+
+            .active {
+                border-bottom: .45vh solid $white;
+            }
+
+            &-number {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) and (orientation: portrait) {
+    .nav {
+        display: none;
+    }
+}
