@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Menu from "./components/Menu";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 
@@ -7,7 +7,7 @@ function AppRoutes() {
 
     return (
         <Router>
-            <Menu />
+            <Navbar />
             <Routes>
                 <Route path="/" element={<Home />}></Route>
             </Routes>

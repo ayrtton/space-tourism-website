@@ -101,7 +101,8 @@
     font-weight: 100;
   }
   .home .hero__button {
-    width: 27vh;
+    width: 24vh;
+    font-size: calc(2.5vh + 0.3rem);
   }
 }
 @media (max-width: 700px) {
@@ -159,6 +160,14 @@
 .nav .logo__image {
   height: 55%;
 }
+.nav .line {
+  position: absolute;
+  width: 34%;
+  left: 15%;
+  z-index: 1;
+  border: 0.25vh solid hsl(0, 0%, 59%);
+  opacity: 0.25;
+}
 .nav .menu {
   display: flex;
   height: 100%;
@@ -199,6 +208,24 @@
 }
 
 @media (max-width: 900px) and (orientation: portrait) {
+  .nav {
+    height: 9.5vh;
+    top: 0;
+  }
+  .nav .logo {
+    width: 20%;
+  }
+  .nav .line {
+    display: none;
+  }
+  .nav .menu {
+    width: 80%;
+  }
+  .nav .menu .active .menu__item-number {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
   .nav {
     display: none;
   }

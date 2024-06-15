@@ -11,6 +11,15 @@
         }
     }
 
+    .line {
+        position: absolute;
+        width: 34%;
+        left: 15%;
+        z-index: 1;
+        border: .25vh solid $gray;
+        opacity: .25;
+    }
+
     .menu {
         @include flexbox(100%, 55%);
         padding-left: 12vw;
@@ -45,6 +54,29 @@
 }
 
 @media (max-width: 900px) and (orientation: portrait) {
+    .nav {
+        height: 9.5vh;
+        top: 0;
+
+        .logo {
+            width: 20%;
+        }
+
+        .line {
+            display: none;
+        }
+
+        .menu {
+            width: 80%;
+
+            .active .menu__item-number {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
     .nav {
         display: none;
     }
