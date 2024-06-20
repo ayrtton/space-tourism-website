@@ -168,6 +168,9 @@
   border: 0.25vh solid hsl(0, 0%, 59%);
   opacity: 0.25;
 }
+.nav .icon {
+  display: none;
+}
 .nav .menu {
   display: flex;
   height: 100%;
@@ -227,7 +230,71 @@
 }
 @media (max-width: 700px) {
   .nav {
-    display: none;
+    height: 12vh;
+  }
+  .nav .logo {
+    width: 25%;
+  }
+  .nav .icon {
+    display: flex;
+    height: 100%;
+    width: 20%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+  }
+  .nav .icon__open {
+    height: 28%;
+    z-index: 1;
+  }
+  .nav .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    height: 100dvh;
+    width: 0vw;
+    overflow: hidden;
+    opacity: 0;
+    transition: 1s;
+    flex-direction: column;
+    padding: 35% 0 0 9%;
+    gap: 4vh;
+  }
+  .nav .menu__item {
+    height: auto;
+    width: 100%;
+  }
+  .nav .menu__item-link {
+    font-size: 1.1rem;
+    gap: 3vw;
+  }
+  .nav .menu__item-title {
+    font-weight: 200;
+  }
+  .nav .menu__item-number {
+    font-weight: 500;
+  }
+  .nav .menu__item .active {
+    border-bottom: none;
+    border-right: 1.2vw solid hsl(0, 0%, 100%);
+  }
+  .nav .menu .active .menu__item-number {
+    display: block;
+  }
+  .nav .open {
+    opacity: 1;
+    width: 65%;
+  }
+}
+@media (max-width: 355px) {
+  .nav .menu {
+    padding-top: 25%;
+  }
+  .nav .menu__item-link {
+    font-size: 0.9rem;
   }
 }
 .attribution {

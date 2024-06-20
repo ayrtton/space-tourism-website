@@ -20,6 +20,10 @@
         opacity: .25;
     }
 
+    .icon {
+        display: none;
+    }
+
     .menu {
         @include flexbox(100%, 55%);
         padding-left: 12vw;
@@ -78,6 +82,82 @@
 
 @media (max-width: 700px) {
     .nav {
-        display: none;
+        height: 12vh;
+
+        .logo {
+            width: 25%;
+        }
+
+        .icon {
+            @include flexbox(100%, 20%, row, center, center);
+            position: absolute;
+            right: 0;
+
+            &__open {
+                height: 28%;
+                z-index: 1;
+            }
+        }
+
+        .menu {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            height: 100dvh;
+            width: 0vw;
+            overflow: hidden;
+            opacity: 0;
+            transition: 1s;
+            flex-direction: column;
+            padding: 35% 0 0 9%;
+            gap: 4vh;
+
+            &__item {
+                height: auto;
+                width: 100%;
+
+                &-link {
+                    font-size: 1.1rem;
+                    gap: 3vw;
+                }
+
+                &-title {
+                    font-weight: 200;
+                }
+
+                &-number {
+                    font-weight: 500;
+                }
+
+                .active {
+                    border-bottom: none;
+                    border-right: 1.2vw solid $white;
+                }
+            }
+
+            .active .menu__item-number {
+                display: block;
+            }
+        }
+
+        .open {
+            opacity: 1;
+            width: 65%;
+        }
+    }
+}
+
+@media (max-width: 355px) {
+    .nav {
+        .menu {
+            padding-top: 25%;
+
+            &__item {
+                &-link {
+                    font-size: .9rem;
+                }
+            }
+        }
     }
 }
