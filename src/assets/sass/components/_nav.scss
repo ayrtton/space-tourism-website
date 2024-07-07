@@ -29,6 +29,7 @@
         padding-left: 12vw;
         list-style: none;
         background-color: rgba(255, 255, 255, .05);
+        gap: 3vw;
         backdrop-filter: blur(20px);
 
         &__item {
@@ -74,6 +75,10 @@
             width: 80%;
 
             .active .menu__item-number {
+                display: none;
+            }
+
+            li:nth-child(2) {
                 display: none;
             }
         }

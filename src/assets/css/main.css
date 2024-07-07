@@ -17,11 +17,11 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: 100dvh;
   background-image: url("../images/home/background-home-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: 100dvh;
 }
 .home .hero {
   display: flex;
@@ -106,6 +106,9 @@
   }
 }
 @media (max-width: 700px) {
+  .home {
+    background-image: url("../images/home/background-home-mobile.jpg");
+  }
   .home .hero__content-message {
     font-size: 1rem;
   }
@@ -139,6 +142,154 @@
     font-size: 0.85rem;
   }
 }
+.destination {
+  display: flex;
+  height: 100vh;
+  width: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/destination/background-destination-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100dvh;
+}
+.destination__content {
+  display: flex;
+  height: 67%;
+  width: 80%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 10vh;
+  color: hsl(0, 0%, 100%);
+}
+.destination__title {
+  width: 100%;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: calc(2.5vh + 0.3rem);
+  font-weight: 200;
+  letter-spacing: 0.4vh;
+}
+.destination__title-number {
+  opacity: 0.35;
+  font-weight: 500;
+  margin-right: 1vw;
+}
+.destination__info {
+  display: flex;
+  height: 80%;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.destination__illustration {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.destination__illustration-image {
+  height: 90%;
+}
+.destination__explanation {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-right: 7vw;
+}
+.destination__menu {
+  display: flex;
+  height: 10%;
+  width: auto;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2.1vw;
+  list-style: none;
+  color: hsl(231, 77%, 90%);
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: calc(1.9vh + 0.3rem);
+  font-weight: 200;
+  letter-spacing: 0.4vh;
+}
+.destination__menu-item {
+  height: 100%;
+}
+.destination__menu-item:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  border-bottom: 0.45vh solid hsla(0, 0%, 100%, 0.5);
+}
+.destination__menu .active {
+  color: hsl(0, 0%, 100%);
+  border-bottom: 0.45vh solid hsl(0, 0%, 100%);
+}
+.destination__text {
+  height: 55%;
+}
+.destination__text-name {
+  font-family: "Bellefair", sans-serif;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  font-size: clamp(3rem, 11vh + 0.3rem, 12rem);
+  letter-spacing: 0.4vh;
+  font-weight: 400;
+}
+.destination__text-description {
+  font-family: "Barlow", sans-serif;
+  font-size: calc(1.45vh + 0.3rem);
+  font-weight: 200;
+  letter-spacing: 0.04vw;
+  line-height: 190%;
+  color: hsl(231, 77%, 90%);
+}
+.destination__line {
+  border: 0.2vh solid hsl(0, 0%, 59%);
+  opacity: 0.25;
+  width: 100%;
+}
+.destination__statistics {
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-transform: uppercase;
+}
+.destination__statistics-info {
+  display: flex;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.2vh;
+}
+.destination__statistics-title {
+  color: hsl(231, 77%, 90%);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: calc(1.45vh + 0.3rem);
+  font-weight: 200;
+  letter-spacing: 0.4vh;
+}
+.destination__statistics-data {
+  font-family: "Bellefair", sans-serif;
+  font-size: calc(2.5vh + 0.3rem);
+  letter-spacing: 0.2vh;
+}
+
 .nav {
   display: flex;
   height: 12vh;
@@ -181,6 +332,7 @@
   padding-left: 12vw;
   list-style: none;
   background-color: rgba(255, 255, 255, 0.05);
+  gap: 3vw;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
 }
@@ -225,6 +377,9 @@
     width: 80%;
   }
   .nav .menu .active .menu__item-number {
+    display: none;
+  }
+  .nav .menu li:nth-child(2) {
     display: none;
   }
 }

@@ -27,6 +27,12 @@ function Navbar() {
                         <div className="menu__item-title">Home</div>
                     </NavLink>
                 </li>
+                <li className="menu__item" onClick={toggleMenu}>
+                    <NavLink className="menu__item-link" to="/destination" activeClassName="active">
+                        <div className="menu__item-number">01</div>
+                        <div className="menu__item-title">Destination</div>
+                    </NavLink>
+                </li>
             </ul>
         </nav>
     );

@@ -1,0 +1,123 @@
+.destination {
+    @include flexbox(100vh, auto, column, center);
+    @include background(url('../images/destination/background-destination-desktop.jpg'));
+    height: 100dvh;
+
+    &__content {
+        @include flexbox(67%, 80%, column, space-between);
+        position: absolute;
+        bottom: 10vh;
+        color: $white;
+    }
+
+    &__title {
+        width: 100%;
+        font-family: 'Barlow Condensed', sans-serif;
+        text-transform: uppercase;
+        font-size: calc(2.5vh + .3rem);
+        font-weight: 200;
+        letter-spacing: .4vh;
+
+        &-number {
+            opacity: .35;
+            font-weight: 500;
+            margin-right: 1vw;
+        }
+    }
+
+    &__info {
+        @include flexbox(80%, 100%, row, space-between);
+    }
+
+    &__illustration {
+        @include flexbox(100%, 50%, row, center);
+        
+        &-image {
+            height: 90%;
+        }
+    }
+
+    &__explanation {
+        @include flexbox(100%, 50%, column, space-between, flex-start);
+        padding-right: 7vw;
+    }
+
+    &__menu {
+        @include flexbox(10%, auto, row, flex-start, flex-start);
+        gap: 2.1vw;
+        list-style: none;
+        color: $light_blue;
+        font-family: 'Barlow Condensed', sans-serif;
+        text-transform: uppercase;
+        font-size: calc(1.9vh + .3rem);
+        font-weight: 200;
+        letter-spacing: .4vh;
+
+        &-item {
+            height: 100%;
+
+            &:hover {
+                cursor: pointer;
+                color: $white;
+                border-bottom: .45vh solid $transparent_white;
+            }
+        }
+
+        .active {
+            color: $white;
+            border-bottom: .45vh solid $white;
+        }
+    }
+
+    &__text {
+        height: 55%;
+
+        &-name {
+            font-family: 'Bellefair', sans-serif;
+            text-transform: uppercase;
+            color: $white;
+            font-size: clamp(3rem, calc(11vh + .3rem), 12rem);
+            letter-spacing: .4vh;
+            font-weight: 400;
+        }
+
+        &-description {
+            font-family: 'Barlow', sans-serif;
+            font-size: calc(1.45vh + .3rem);
+            font-weight: 200;
+            letter-spacing: .04vw;
+            line-height: 190%;
+            color: $light_blue;
+        }
+    }
+
+    &__line {
+        border: .2vh solid $gray;
+        opacity: .25;
+        width: 100%;
+    }
+
+    &__statistics {
+        @include flexbox(auto, 100%);
+        text-transform: uppercase;
+
+        &-info {
+            @include flexbox(auto, 100%, column, center, flex-start);
+            gap: 1.2vh;
+        }
+
+        &-title {
+            color: $light_blue;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: calc(1.45vh + .3rem);
+            font-weight: 200;
+            letter-spacing: .4vh;
+        }
+
+        &-data {
+            font-family: 'Bellefair', sans-serif;
+            font-size: calc(2.5vh + .3rem);
+            letter-spacing: .2vh;
+        }
+    }
+}

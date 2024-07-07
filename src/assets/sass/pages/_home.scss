@@ -1,10 +1,7 @@
 .home {
     @include flexbox(100vh, auto, column, flex-end);
+    @include background(url('../images/home/background-home-desktop.jpg'));
     height: 100dvh;
-    background-image: url('../images/home/background-home-desktop.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 
     .hero {
         @include flexbox(auto, 80%, row, space-between);
@@ -94,6 +91,8 @@
 
 @media (max-width: 700px) {
     .home {
+        background-image: url('../images/home/background-home-mobile.jpg');
+
         .hero {
             &__content {
                 &-message {
