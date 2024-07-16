@@ -242,7 +242,7 @@
   font-family: "Bellefair", sans-serif;
   text-transform: uppercase;
   color: hsl(0, 0%, 100%);
-  font-size: clamp(3rem, 11vh + 0.3rem, 12rem);
+  font-size: clamp(3rem, 10vh + 0.3rem, 11rem);
   letter-spacing: 0.4vh;
   font-weight: 400;
 }
@@ -255,7 +255,7 @@
   color: hsl(231, 77%, 90%);
 }
 .destination__line {
-  border: 0.2vh solid hsl(0, 0%, 59%);
+  border: 0.1vh solid hsl(0, 0%, 59%);
   opacity: 0.25;
   width: 100%;
 }
@@ -290,6 +290,69 @@
   letter-spacing: 0.2vh;
 }
 
+@media (max-width: 900px) {
+  .destination__content {
+    height: 87%;
+    width: 90%;
+    bottom: 0;
+  }
+  .destination__title {
+    font-size: calc(1.9vh + 0.3rem);
+    font-weight: 100;
+  }
+  .destination__title-number {
+    margin-right: 2vw;
+  }
+  .destination__info {
+    height: 92%;
+    flex-direction: column;
+    gap: 2vh;
+  }
+  .destination__illustration {
+    height: 42%;
+    margin: auto;
+  }
+  .destination__illustration-image {
+    height: 90%;
+  }
+  .destination__explanation {
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 3vh;
+  }
+  .destination__menu {
+    height: 8%;
+    width: 100%;
+    justify-content: center;
+    font-size: calc(1.2vh + 0.3rem);
+    gap: 3.5vw;
+  }
+  .destination__text {
+    height: 55%;
+    text-align: center;
+    padding: 0 7vw;
+  }
+  .destination__text-name {
+    font-size: calc(7vh + 0.3rem);
+  }
+  .destination__text-description {
+    font-weight: 100;
+  }
+  .destination__statistics {
+    height: 20%;
+  }
+  .destination__statistics-info {
+    align-items: center;
+  }
+  .destination__statistics-title {
+    font-size: calc(1vh + 0.3rem);
+    letter-spacing: 0.3vh;
+  }
+  .destination__statistics-data {
+    font-size: calc(2vh + 0.3rem);
+    letter-spacing: 0.2vh;
+  }
+}
 .nav {
   display: flex;
   height: 12vh;
@@ -376,11 +439,12 @@
   .nav .menu {
     width: 80%;
   }
-  .nav .menu .active .menu__item-number {
-    display: none;
+  .nav .menu__item-link {
+    gap: 1.5vw;
+    font-weight: 100;
   }
-  .nav .menu li:nth-child(2) {
-    display: none;
+  .nav .menu__item-number {
+    font-weight: 400;
   }
 }
 @media (max-width: 700px) {
@@ -402,7 +466,7 @@
   }
   .nav .icon__open {
     height: 28%;
-    z-index: 1;
+    z-index: 2;
   }
   .nav .menu {
     position: absolute;
@@ -417,10 +481,14 @@
     flex-direction: column;
     padding: 35% 0 0 9%;
     gap: 4vh;
+    z-index: 1;
   }
   .nav .menu__item {
     height: auto;
     width: 100%;
+  }
+  .nav .menu__item:nth-child(2) {
+    display: none;
   }
   .nav .menu__item-link {
     font-size: 1.1rem;

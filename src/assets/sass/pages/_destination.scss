@@ -76,7 +76,7 @@
             font-family: 'Bellefair', sans-serif;
             text-transform: uppercase;
             color: $white;
-            font-size: clamp(3rem, calc(11vh + .3rem), 12rem);
+            font-size: clamp(3rem, calc(10vh + .3rem), 11rem);
             letter-spacing: .4vh;
             font-weight: 400;
         }
@@ -92,7 +92,7 @@
     }
 
     &__line {
-        border: .2vh solid $gray;
+        border: .1vh solid $gray;
         opacity: .25;
         width: 100%;
     }
@@ -118,6 +118,86 @@
             font-family: 'Bellefair', sans-serif;
             font-size: calc(2.5vh + .3rem);
             letter-spacing: .2vh;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .destination {
+        &__content {
+            height: 87%;
+            width: 90%;
+            bottom: 0;
+        }
+
+        &__title {
+            font-size: calc(1.9vh + .3rem);
+            font-weight: 100;
+
+            &-number {
+                margin-right: 2vw;
+            }
+        }
+
+        &__info {
+            height: 92%;
+            flex-direction: column;
+            gap: 2vh;
+        }
+
+        &__illustration {
+            height: 42%;
+            margin: auto;
+            
+            &-image {
+                height: 90%;
+            }
+        }
+
+        &__explanation {
+            width: 100%;
+            padding-right: 0;
+            padding-bottom: 3vh;
+        }
+
+        &__menu {
+            height: 8%;
+            width: 100%;
+            justify-content: center;
+            font-size: calc(1.2vh + .3rem);
+            gap: 3.5vw;
+        }
+
+        &__text {
+            height: 55%;
+            text-align: center;
+            padding: 0 7vw;
+    
+            &-name {
+                font-size: calc(7vh + .3rem);
+            }
+    
+            &-description {
+                font-weight: 100;
+            }
+        }
+
+        &__statistics {
+            height: 20%;
+
+            &-info {
+                align-items: center;
+            }
+
+            &-title {
+                font-size: calc(1vh + .3rem);
+                letter-spacing: .3vh;
+            }
+
+            &-data {
+                font-size: calc(2vh + .3rem);
+                letter-spacing: .2vh;
+            }
         }
     }
 }
