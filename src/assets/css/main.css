@@ -353,6 +353,67 @@
     letter-spacing: 0.2vh;
   }
 }
+@media (max-width: 700px) {
+  .destination {
+    min-height: 114dvh;
+  }
+  .destination__content {
+    height: auto;
+    bottom: auto;
+    top: 14vh;
+    gap: 7vh;
+  }
+  .destination__title {
+    text-align: center;
+  }
+  .destination__title-number {
+    margin-right: 2.5vh;
+  }
+  .destination__info {
+    gap: 6vh;
+  }
+  .destination__illustration {
+    height: 22vh;
+    width: auto;
+  }
+  .destination__illustration-image {
+    height: 100%;
+  }
+  .destination__explanation {
+    gap: 2vh;
+  }
+  .destination__menu {
+    height: 4vh;
+    gap: 3.5vh;
+  }
+  .destination__text {
+    padding: 0;
+  }
+  .destination__text-name {
+    margin: 2vh 0 1vh;
+  }
+  .destination__text-description {
+    line-height: 170%;
+  }
+  .destination__line {
+    margin: 1vh 0;
+  }
+  .destination__statistics {
+    flex-direction: column;
+    gap: 3vh;
+  }
+  .destination__statistics-title {
+    font-size: calc(1.5vh + 0.3rem);
+  }
+  .destination__statistics-data {
+    font-size: calc(2.5vh + 0.3rem);
+  }
+}
+@media (max-width: 355px) {
+  .destination {
+    min-height: 120vh;
+  }
+}
 .nav {
   display: flex;
   height: 12vh;
@@ -482,13 +543,12 @@
     padding: 35% 0 0 9%;
     gap: 4vh;
     z-index: 1;
+    -webkit-backdrop-filter: blur(100px);
+            backdrop-filter: blur(100px);
   }
   .nav .menu__item {
     height: auto;
     width: 100%;
-  }
-  .nav .menu__item:nth-child(2) {
-    display: none;
   }
   .nav .menu__item-link {
     font-size: 1.1rem;
@@ -520,7 +580,7 @@
     font-size: 0.9rem;
   }
 }
-.attribution {
+.footer .attribution {
   display: flex;
   height: 14vh;
   width: 100%;
@@ -534,12 +594,12 @@
   font-family: "Barlow", sans-serif;
   letter-spacing: 0.15vh;
 }
-.attribution__link {
+.footer .attribution__link {
   text-decoration: none;
   transition: 0.5s;
   color: hsl(231, 77%, 80%);
 }
-.attribution__link:hover {
+.footer .attribution__link:hover {
   color: hsl(231, 77%, 90%);
 }
 

@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer>
+        <footer className="footer">
             <div className="attribution">
                 <p className="attribution__source">Challenge by&nbsp;
                     <a className="attribution__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">

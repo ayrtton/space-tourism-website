@@ -201,3 +201,83 @@
         }
     }
 }
+
+
+@media (max-width: 700px) {
+    .destination {
+        min-height: 114dvh;
+
+        &__content {
+            height: auto;
+            bottom: auto;
+            top: 14vh;
+            gap: 7vh;
+        }
+
+        &__title {
+            text-align: center;
+
+            &-number {
+                margin-right: 2.5vh;
+            }
+        }
+
+        &__info {
+            gap: 6vh;
+        }
+
+        &__illustration {
+            height: 22vh;
+            width: auto;
+
+            &-image {
+                height: 100%;
+            }
+        }
+
+        &__explanation {
+            gap: 2vh;
+        }
+
+        &__menu {
+            height: 4vh;
+            gap: 3.5vh;
+        }
+
+        &__text {
+            padding: 0;
+
+            &-name {
+                margin: 2vh 0 1vh;
+            }
+
+            &-description {
+                line-height: 170%;
+
+            }
+        }
+
+        &__line {
+            margin: 1vh 0;
+        }
+
+        &__statistics {
+            flex-direction: column;
+            gap: 3vh;
+
+            &-title {
+                font-size: calc(1.5vh + .3rem);
+            }
+
+            &-data {
+                font-size: calc(2.5vh + .3rem);
+            }
+        }
+    }
+}
+
+@media (max-width: 355px) {
+    .destination {
+        min-height: 120vh;
+    }
+}

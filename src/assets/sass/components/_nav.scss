@@ -121,14 +121,11 @@
             padding: 35% 0 0 9%;
             gap: 4vh;
             z-index: 1;
+            backdrop-filter: blur(100px);
 
             &__item {
                 height: auto;
                 width: 100%;
-
-                &:nth-child(2) {
-                    display: none;
-                }
 
                 &-link {
                     font-size: 1.1rem;
