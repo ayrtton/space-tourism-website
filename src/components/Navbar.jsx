@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../assets/images/shared/logo.svg';
-import iconHamburger from '../assets/images/shared/icon-hamburger.svg';
-import iconClose from '../assets/images/shared/icon-close.svg';
+import logo from '/images/shared/logo.svg';
+import iconHamburger from '/images/shared/icon-hamburger.svg';
+import iconClose from '/images/shared/icon-close.svg';
 
 function Navbar() {
     const [menu, setMenu] = useState(false);

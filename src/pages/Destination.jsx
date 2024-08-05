@@ -13,7 +13,7 @@ function Destination(props) {
                 </h1>
                 <div className="destination__info">
                     <div className="destination__illustration">
-                        <img className="destination__illustration-image" src={`src/${props.destinations[activeTab].images.png}`} alt="" />
+                        <img className="destination__illustration-image" src={`${props.destinations[activeTab].images.png}`} alt="" />
                     </div>
                     <div className="destination__explanation">
                         <ul className="destination__menu">
