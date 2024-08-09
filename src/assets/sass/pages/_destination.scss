@@ -205,6 +205,7 @@
 
 @media (max-width: 700px) {
     .destination {
+        min-height: 114vh;
         min-height: 114dvh;
 
         &__content {

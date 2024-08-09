@@ -355,6 +355,7 @@
 }
 @media (max-width: 700px) {
   .destination {
+    min-height: 114vh;
     min-height: 114dvh;
   }
   .destination__content {
@@ -543,8 +544,8 @@
     padding: 35% 0 0 9%;
     gap: 4vh;
     z-index: 1;
-    -webkit-backdrop-filter: blur(100px);
-            backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(50px);
+            backdrop-filter: blur(50px);
   }
   .nav .menu__item {
     height: auto;
