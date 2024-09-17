@@ -1,0 +1,78 @@
+.crew {
+    @include flexbox(100vh, auto, column, center);
+    background-color: $very_dark_navy;
+    @include background(url('../images/crew/background-crew-desktop.jpg'));
+
+    &__content {
+        @include flexbox(70%, 80%, column, space-between);
+        position: absolute;
+        bottom: 7vh;
+        color: $white;
+    }
+
+    &__title {
+        width: 100%;
+        font-family: 'Barlow Condensed', sans-serif;
+        text-transform: uppercase;
+        font-size: calc(2.5vh + .3rem);
+        font-weight: 200;
+        letter-spacing: .4vh;
+
+        &-number {
+            opacity: .35;
+            font-weight: 500;
+            margin-right: 1vw;
+        }
+    }
+
+    &__info {
+        @include flexbox(94%, 100%);
+    }
+
+    &__text {
+        @include flexbox(auto, 60%, column, flex-start, flex-start);
+        gap: 1.5vh;
+
+        &-role {
+            font-family: 'Bellefair', sans-serif;
+            text-transform: uppercase;
+            color: $transparent_white;
+            font-size: clamp(1rem, calc(3vh + .3rem), 6rem);
+            font-weight: 400;
+        }
+
+        &-name {
+            font-family: 'Bellefair', sans-serif;
+            text-transform: uppercase;
+            color: $white;
+            font-size: clamp(2.5rem, calc(5vh + .3rem), 9rem);
+            letter-spacing: .4vh;
+            font-weight: 400;
+        }
+
+        &-bio {
+            width: 80%;
+            margin-top: 1.2vh;
+            font-family: 'Barlow', sans-serif;
+            font-size: calc(1.45vh + .3rem);
+            font-weight: 200;
+            letter-spacing: .04vw;
+            line-height: 190%;
+            color: $light_blue;
+        }
+    }
+
+    &__illustration {
+        height: 100%;
+
+        &-image {
+            height: inherit;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .crew {
+        display: none;
+    }
+}

@@ -415,6 +415,97 @@
     min-height: 120vh;
   }
 }
+.crew {
+  display: flex;
+  height: 100vh;
+  width: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(230, 35%, 7%);
+  background-image: url("../images/crew/background-crew-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.crew__content {
+  display: flex;
+  height: 70%;
+  width: 80%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 7vh;
+  color: hsl(0, 0%, 100%);
+}
+.crew__title {
+  width: 100%;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: calc(2.5vh + 0.3rem);
+  font-weight: 200;
+  letter-spacing: 0.4vh;
+}
+.crew__title-number {
+  opacity: 0.35;
+  font-weight: 500;
+  margin-right: 1vw;
+}
+.crew__info {
+  display: flex;
+  height: 94%;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.crew__text {
+  display: flex;
+  height: auto;
+  width: 60%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5vh;
+}
+.crew__text-role {
+  font-family: "Bellefair", sans-serif;
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: clamp(1rem, 3vh + 0.3rem, 6rem);
+  font-weight: 400;
+}
+.crew__text-name {
+  font-family: "Bellefair", sans-serif;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  font-size: clamp(2.5rem, 5vh + 0.3rem, 9rem);
+  letter-spacing: 0.4vh;
+  font-weight: 400;
+}
+.crew__text-bio {
+  width: 80%;
+  margin-top: 1.2vh;
+  font-family: "Barlow", sans-serif;
+  font-size: calc(1.45vh + 0.3rem);
+  font-weight: 200;
+  letter-spacing: 0.04vw;
+  line-height: 190%;
+  color: hsl(231, 77%, 90%);
+}
+.crew__illustration {
+  height: 100%;
+}
+.crew__illustration-image {
+  height: inherit;
+}
+
+@media (max-width: 900px) {
+  .crew {
+    display: none;
+  }
+}
 .nav {
   display: flex;
   height: 12vh;
@@ -501,6 +592,9 @@
   .nav .menu {
     width: 80%;
   }
+  .nav .menu :nth-child(3) {
+    display: none;
+  }
   .nav .menu__item-link {
     gap: 1.5vw;
     font-weight: 100;
@@ -544,8 +638,8 @@
     padding: 35% 0 0 9%;
     gap: 4vh;
     z-index: 1;
-    -webkit-backdrop-filter: blur(50px);
-            backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(40px);
+            backdrop-filter: blur(40px);
   }
   .nav .menu__item {
     height: auto;

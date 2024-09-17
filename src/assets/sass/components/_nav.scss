@@ -73,8 +73,12 @@
 
         .menu {
             width: 80%;
+                       
+            :nth-child(3) {
+                display: none;
+            }
 
-            &__item {
+            &__item {         
                 &-link {
                     gap: 1.5vw;
                     font-weight: 100;
@@ -121,7 +125,7 @@
             padding: 35% 0 0 9%;
             gap: 4vh;
             z-index: 1;
-            backdrop-filter: blur(50px);
+            backdrop-filter: blur(40px);
 
             &__item {
                 height: auto;

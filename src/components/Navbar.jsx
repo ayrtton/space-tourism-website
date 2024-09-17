@@ -33,6 +33,12 @@ function Navbar() {
                         <div className="menu__item-title">Destination</div>
                     </NavLink>
                 </li>
+                <li className="menu__item" onClick={toggleMenu}>
+                    <NavLink className="menu__item-link" to="/crew" activeClassName="active">
+                        <div className="menu__item-number">02</div>
+                        <div className="menu__item-title">Crew</div>
+                    </NavLink>
+                </li>
             </ul>
         </nav>
     );
