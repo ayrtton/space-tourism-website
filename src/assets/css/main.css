@@ -503,7 +503,48 @@
 
 @media (max-width: 900px) {
   .crew {
-    display: none;
+    height: 100dvh;
+  }
+  .crew__content {
+    height: 87%;
+    width: 90%;
+    bottom: 0;
+  }
+  .crew__title {
+    font-size: calc(1.9vh + 0.3rem);
+    font-weight: 100;
+  }
+  .crew__title-number {
+    margin-right: 2vw;
+  }
+  .crew__info {
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 4vh;
+    gap: 7vh;
+  }
+  .crew__text {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .crew__text-role {
+    font-size: calc(2vh + 0.3rem);
+    letter-spacing: 0.3vw;
+  }
+  .crew__text-name {
+    font-size: calc(3.5vh + 0.3rem);
+  }
+  .crew__text-bio {
+    font-weight: 100;
+  }
+  .crew__illustration {
+    width: 55%;
+    overflow: hidden;
+  }
+  .crew__illustration-image {
+    height: auto;
+    width: 100%;
   }
 }
 .nav {
@@ -591,9 +632,6 @@
   }
   .nav .menu {
     width: 80%;
-  }
-  .nav .menu :nth-child(3) {
-    display: none;
   }
   .nav .menu__item-link {
     gap: 1.5vw;
