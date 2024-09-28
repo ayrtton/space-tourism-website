@@ -1,0 +1,110 @@
+.technology {
+    @include flexbox(100vh, auto, column, center);
+    @include background(url('../images/technology/background-technology-desktop.jpg'));
+    height: 100dvh;
+
+    &__content {
+        @include flexbox(67%, 80%, column, space-between);
+        position: absolute;
+        bottom: 10vh;
+        color: $white;
+    }
+
+    &__title {
+        width: 100%;
+        font-family: 'Barlow Condensed', sans-serif;
+        text-transform: uppercase;
+        font-size: calc(2.5vh + .3rem);
+        font-weight: 200;
+        letter-spacing: .4vh;
+
+        &-number {
+            opacity: .35;
+            font-weight: 500;
+            margin-right: 1vw;
+        }
+    }
+
+    &__info {
+        @include flexbox(90%, auto);
+    }
+
+    &__explanation {@include flexbox(100%, 58%, row, space-between);
+    }
+
+    &__menu {
+        @include flexbox(70%, 11%, column, space-evenly);
+        list-style: none;
+
+        &-item {
+            @include flexbox(auto, 100%, row, center);
+            border: .12rem solid $transparent_white;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            font-size: clamp(1rem, calc(3.1vh + .3rem), 6rem);
+            font-family: 'Bellefair', sans-serif;
+
+            &:hover {
+                cursor: pointer;
+                border: .12rem solid $white;
+            }
+        }
+
+        .active {
+            background-color: $white;
+            color: $very_dark_navy;
+        }
+    }
+
+    &__text {
+        @include flexbox(auto, 82%, column, center, flex-start);
+        gap: 1.5vh;
+        padding-right: 4vw;
+
+        &-title {
+            font-family: 'Bellefair', sans-serif;
+            text-transform: uppercase;
+            color: $transparent_white;
+            font-size: clamp(1rem, calc(3.1vh + .3rem), 6rem);
+            letter-spacing: .1vh;
+            font-weight: 400;
+        }
+
+        &-name {
+            margin-bottom: .7vh;
+            font-family: 'Bellefair', sans-serif;
+            text-transform: uppercase;
+            font-size: clamp(2.8rem, calc(6vh + .3rem), 7rem);
+            letter-spacing: .1vh;
+            font-weight: 400;
+        }
+
+        &-description {
+            font-family: 'Barlow', sans-serif;
+            font-size: calc(1.45vh + .3rem);
+            font-weight: 200;
+            letter-spacing: .04vw;
+            line-height: 190%;
+            color: $light_blue;
+        }
+    }
+
+    &__illustration {
+        width: 42%;
+        height: 100%;
+
+        &-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 0%;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .technology {
+        display: none;
+    }
+}

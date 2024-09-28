@@ -75,6 +75,10 @@
             width: 80%;
 
             &__item {         
+                &:nth-child(3) {
+                    display: none;
+                }
+
                 &-link {
                     gap: 1.5vw;
                     font-weight: 100;

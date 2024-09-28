@@ -415,31 +415,31 @@
     min-height: 120vh;
   }
 }
-.crew {
+.technology {
   display: flex;
   height: 100vh;
   width: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: hsl(230, 35%, 7%);
-  background-image: url("../images/crew/background-crew-desktop.jpg");
+  background-image: url("../images/technology/background-technology-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: 100dvh;
 }
-.crew__content {
+.technology__content {
   display: flex;
-  height: 70%;
+  height: 67%;
   width: 80%;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  bottom: 7vh;
+  bottom: 10vh;
   color: hsl(0, 0%, 100%);
 }
-.crew__title {
+.technology__title {
   width: 100%;
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
@@ -447,46 +447,84 @@
   font-weight: 200;
   letter-spacing: 0.4vh;
 }
-.crew__title-number {
+.technology__title-number {
   opacity: 0.35;
   font-weight: 500;
   margin-right: 1vw;
 }
-.crew__info {
+.technology__info {
   display: flex;
-  height: 94%;
-  width: 100%;
+  height: 90%;
+  width: auto;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
-.crew__text {
+.technology__explanation {
+  display: flex;
+  height: 100%;
+  width: 58%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.technology__menu {
+  display: flex;
+  height: 70%;
+  width: 11%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+.technology__menu-item {
   display: flex;
   height: auto;
-  width: 60%;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 0.12rem solid hsla(0, 0%, 100%, 0.5);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  font-size: clamp(1rem, 3.1vh + 0.3rem, 6rem);
+  font-family: "Bellefair", sans-serif;
+}
+.technology__menu-item:hover {
+  cursor: pointer;
+  border: 0.12rem solid hsl(0, 0%, 100%);
+}
+.technology__menu .active {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(230, 35%, 7%);
+}
+.technology__text {
+  display: flex;
+  height: auto;
+  width: 82%;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   gap: 1.5vh;
+  padding-right: 4vw;
 }
-.crew__text-role {
+.technology__text-title {
   font-family: "Bellefair", sans-serif;
   text-transform: uppercase;
   color: hsla(0, 0%, 100%, 0.5);
-  font-size: clamp(1rem, 3vh + 0.3rem, 6rem);
+  font-size: clamp(1rem, 3.1vh + 0.3rem, 6rem);
+  letter-spacing: 0.1vh;
   font-weight: 400;
 }
-.crew__text-name {
+.technology__text-name {
+  margin-bottom: 0.7vh;
   font-family: "Bellefair", sans-serif;
   text-transform: uppercase;
-  color: hsl(0, 0%, 100%);
-  font-size: clamp(2.5rem, 5vh + 0.3rem, 9rem);
-  letter-spacing: 0.4vh;
+  font-size: clamp(2.8rem, 6vh + 0.3rem, 7rem);
+  letter-spacing: 0.1vh;
   font-weight: 400;
 }
-.crew__text-bio {
-  width: 80%;
-  margin-top: 1.2vh;
+.technology__text-description {
   font-family: "Barlow", sans-serif;
   font-size: calc(1.45vh + 0.3rem);
   font-weight: 200;
@@ -494,57 +532,23 @@
   line-height: 190%;
   color: hsl(231, 77%, 90%);
 }
-.crew__illustration {
+.technology__illustration {
+  width: 42%;
   height: 100%;
 }
-.crew__illustration-image {
-  height: inherit;
+.technology__illustration-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0%;
+     object-position: 50% 0%;
 }
 
 @media (max-width: 900px) {
-  .crew {
-    height: 100dvh;
-  }
-  .crew__content {
-    height: 87%;
-    width: 90%;
-    bottom: 0;
-  }
-  .crew__title {
-    font-size: calc(1.9vh + 0.3rem);
-    font-weight: 100;
-  }
-  .crew__title-number {
-    margin-right: 2vw;
-  }
-  .crew__info {
-    flex-direction: column;
-    justify-content: space-between;
-    padding-top: 4vh;
-    gap: 7vh;
-  }
-  .crew__text {
-    width: 100%;
-    align-items: center;
-    text-align: center;
-  }
-  .crew__text-role {
-    font-size: calc(2vh + 0.3rem);
-    letter-spacing: 0.3vw;
-  }
-  .crew__text-name {
-    font-size: calc(3.5vh + 0.3rem);
-  }
-  .crew__text-bio {
-    font-weight: 100;
-  }
-  .crew__illustration {
-    width: 55%;
-    overflow: hidden;
-  }
-  .crew__illustration-image {
-    height: auto;
-    width: 100%;
+  .technology {
+    display: none;
   }
 }
 .nav {
@@ -632,6 +636,9 @@
   }
   .nav .menu {
     width: 80%;
+  }
+  .nav .menu__item:nth-child(3) {
+    display: none;
   }
   .nav .menu__item-link {
     gap: 1.5vw;
