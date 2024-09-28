@@ -11,7 +11,7 @@ function Home() {
                         because we’ll give you a truly out of this world experience!
                     </p>
                 </div>
-                <a className="hero__button" href="" target="_blank">Explore</a>
+                <a className="hero__button" href="/destination">Explore</a>
             </div>
         </main>
     )
