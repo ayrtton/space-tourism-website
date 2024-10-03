@@ -71,7 +71,7 @@
         }
 
         &-name {
-            margin-bottom: .7vh;
+            margin: .3vh 0 .7vh;
             font-family: 'Bellefair', sans-serif;
             text-transform: uppercase;
             font-size: clamp(2.8rem, calc(6vh + .3rem), 7rem);
@@ -104,6 +104,78 @@
 }
 
 @media (max-width: 900px) {
+    .technology {
+        &__content {
+            height: 87%;
+            width: 90%;
+            bottom: 0;
+        }
+
+        &__title {
+            font-size: calc(1.9vh + .3rem);
+            font-weight: 100;
+
+            &-number {
+                margin-right: 2vw;
+            }
+        }
+        
+        &__info {
+            height: 92%;
+            flex-direction: column-reverse;
+            gap: 0vh;
+        }
+
+        &__illustration {
+            width: 100vw;
+            height: 40%;
+
+            &-image {
+                object-position: 50% 50%;
+            }
+        }
+
+        &__explanation {
+            height: 60%;
+            width: 100%;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        &__menu {
+            height: auto;
+            width: auto;
+            flex-direction: row;
+            margin: 4vh;
+            gap: 3vw;
+
+            &-item {
+                width: 8.5vw;
+                font-size: calc(2vh + .3rem);
+            }
+        }
+
+        &__text {
+            align-items: center;
+            padding: 0;
+
+            &-title {
+                font-size: calc(2vh + .3rem);
+            }
+
+            &-name {
+                font-size: calc(4vh + .3rem);
+            }
+
+            &-description {
+                text-align: center;
+                font-weight: 100;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
     .technology {
         display: none;
     }

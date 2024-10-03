@@ -517,7 +517,7 @@
   font-weight: 400;
 }
 .technology__text-name {
-  margin-bottom: 0.7vh;
+  margin: 0.3vh 0 0.7vh;
   font-family: "Bellefair", sans-serif;
   text-transform: uppercase;
   font-size: clamp(2.8rem, 6vh + 0.3rem, 7rem);
@@ -547,6 +547,64 @@
 }
 
 @media (max-width: 900px) {
+  .technology__content {
+    height: 87%;
+    width: 90%;
+    bottom: 0;
+  }
+  .technology__title {
+    font-size: calc(1.9vh + 0.3rem);
+    font-weight: 100;
+  }
+  .technology__title-number {
+    margin-right: 2vw;
+  }
+  .technology__info {
+    height: 92%;
+    flex-direction: column-reverse;
+    gap: 0vh;
+  }
+  .technology__illustration {
+    width: 100vw;
+    height: 40%;
+  }
+  .technology__illustration-image {
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+  }
+  .technology__explanation {
+    height: 60%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .technology__menu {
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    margin: 4vh;
+    gap: 3vw;
+  }
+  .technology__menu-item {
+    width: 8.5vw;
+    font-size: calc(2vh + 0.3rem);
+  }
+  .technology__text {
+    align-items: center;
+    padding: 0;
+  }
+  .technology__text-title {
+    font-size: calc(2vh + 0.3rem);
+  }
+  .technology__text-name {
+    font-size: calc(4vh + 0.3rem);
+  }
+  .technology__text-description {
+    text-align: center;
+    font-weight: 100;
+  }
+}
+@media (max-width: 700px) {
   .technology {
     display: none;
   }
@@ -629,20 +687,22 @@
     top: 0;
   }
   .nav .logo {
-    width: 20%;
+    width: 18%;
+  }
+  .nav .logo__image {
+    height: 45%;
   }
   .nav .line {
     display: none;
   }
   .nav .menu {
-    width: 80%;
-  }
-  .nav .menu__item:nth-child(3) {
-    display: none;
+    width: 82%;
+    gap: 4vw;
   }
   .nav .menu__item-link {
     gap: 1.5vw;
     font-weight: 100;
+    font-size: calc(1vh + 0.3rem);
   }
   .nav .menu__item-number {
     font-weight: 400;
@@ -689,6 +749,9 @@
   .nav .menu__item {
     height: auto;
     width: 100%;
+  }
+  .nav .menu__item:nth-child(3) {
+    display: none;
   }
   .nav .menu__item-link {
     font-size: 1.1rem;
