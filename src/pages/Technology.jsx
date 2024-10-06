@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 function Technology(props) {
     const [activeTab, setActiveTab] = useState(0);
+    let isMobile = window.innerWidth <= 900 && (window.screen.orientation.type === "portrait-primary" ||
+        window.screen.orientation.type === "portrait-secondary");
 
     return (
         <main className="technology">
@@ -29,7 +31,9 @@ function Technology(props) {
                         </div>
                     </div>
                     <div className="technology__illustration">
-                        <img className="technology__illustration-image" src={props.technology[activeTab].images.portrait} alt="Technology Image"></img>
+                        <img className="technology__illustration-image" 
+                            src={!isMobile && props.technology[activeTab].images.portrait || isMobile && props.technology[activeTab].images.landscape} 
+                            alt="Technology Image"></img>
                     </div>
                 </div>
             </div>

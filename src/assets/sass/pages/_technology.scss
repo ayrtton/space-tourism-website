@@ -177,6 +177,38 @@
 
 @media (max-width: 700px) {
     .technology {
-        display: none;
+        min-height: 120vh;
+        min-height: 120dvh;
+
+        &__content {
+            top: 14vh;
+            gap: 10vh;
+        }
+        
+        &__title {
+            text-align: center;
+
+            &-number {
+                margin-right: 2.5vw;
+            }
+        }
+
+        &__menu {
+            gap: 4vw;
+
+            &-item {
+                width: 10vw;
+            }
+        }
+
+        &__text {
+            gap: 2vh;
+        }
+    }
+}
+
+@media (max-width: 355px) {
+    .technology {
+        min-height: 125vh;
     }
 }

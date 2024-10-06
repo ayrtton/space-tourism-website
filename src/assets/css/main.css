@@ -606,7 +606,32 @@
 }
 @media (max-width: 700px) {
   .technology {
-    display: none;
+    min-height: 120vh;
+    min-height: 120dvh;
+  }
+  .technology__content {
+    top: 14vh;
+    gap: 10vh;
+  }
+  .technology__title {
+    text-align: center;
+  }
+  .technology__title-number {
+    margin-right: 2.5vw;
+  }
+  .technology__menu {
+    gap: 4vw;
+  }
+  .technology__menu-item {
+    width: 10vw;
+  }
+  .technology__text {
+    gap: 2vh;
+  }
+}
+@media (max-width: 355px) {
+  .technology {
+    min-height: 125vh;
   }
 }
 .nav {
@@ -749,9 +774,6 @@
   .nav .menu__item {
     height: auto;
     width: 100%;
-  }
-  .nav .menu__item:nth-child(3) {
-    display: none;
   }
   .nav .menu__item-link {
     font-size: 1.1rem;
