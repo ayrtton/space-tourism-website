@@ -735,6 +735,8 @@
 }
 @media (max-width: 700px) {
   .nav {
+    position: fixed;
+    z-index: 1;
     height: 12vh;
   }
   .nav .logo {
