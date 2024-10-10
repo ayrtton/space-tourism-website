@@ -11,6 +11,18 @@ function Navbar() {
         setMenu(!menu);
     }
 
+    let logoImage = document.getElementsByClassName("logo__image");
+    let isMobile = window.innerWidth <= 700 && (window.screen.orientation.type === "portrait-primary" ||
+        window.screen.orientation.type === "portrait-secondary");
+
+    // Function to hide logo on window scroll of mobile devices
+    window.onscroll = () => {
+        if(isMobile) {
+            logoImage[0].style.transition = "1s";
+            logoImage[0].style.opacity = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "0" : "1";
+        }
+    }
+
     return (
         <nav className="nav">
             <div className="logo">
