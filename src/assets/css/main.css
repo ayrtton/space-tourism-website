@@ -427,6 +427,38 @@
     min-height: 120vh;
   }
 }
+@media (max-width: 940px) and (orientation: landscape) {
+  .destination__content {
+    height: 77%;
+    width: 85%;
+  }
+  .destination__info {
+    flex-direction: row;
+  }
+  .destination__illustration {
+    height: 75%;
+    width: 50%;
+  }
+  .destination__explanation {
+    height: 95%;
+    width: 50%;
+  }
+  .destination__menu {
+    justify-content: flex-start;
+    gap: 2.5vw;
+  }
+  .destination__text {
+    text-align: start;
+    padding: 0;
+  }
+  .destination__text-name {
+    font-size: calc(8vh + 0.3rem);
+    margin-bottom: 1.5vh;
+  }
+  .destination__statistics-info {
+    align-items: flex-start;
+  }
+}
 .technology {
   display: flex;
   height: 100vh;

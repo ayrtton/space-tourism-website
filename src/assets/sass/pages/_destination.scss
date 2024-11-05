@@ -280,3 +280,47 @@
         min-height: 120vh;
     }
 }
+
+@media (max-width: 940px) and (orientation: landscape) {
+    .destination {
+        &__content {
+            height: 77%;
+            width: 85%;
+        }
+
+        &__info {
+            flex-direction: row;
+        }
+
+        &__illustration {
+            height: 75%;
+            width: 50%;
+        }
+
+        &__explanation {
+            height: 95%;
+            width: 50%;
+        }
+
+        &__menu {
+            justify-content: flex-start;
+            gap: 2.5vw;
+        }
+
+        &__text {
+            text-align: start;
+            padding: 0;
+
+            &-name {
+                font-size: calc(8vh + .3rem);
+                margin-bottom: 1.5vh;
+            }
+        }
+
+        &__statistics {
+            &-info {
+                align-items: flex-start;
+            }
+        }
+    }
+}
