@@ -678,6 +678,42 @@
     min-height: 125vh;
   }
 }
+@media (max-width: 940px) and (orientation: landscape) {
+  .technology__content {
+    height: 77%;
+    width: 85%;
+    justify-content: flex-start;
+    gap: 5vh;
+  }
+  .technology__info {
+    height: 80%;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .technology__explanation {
+    height: 100%;
+    width: 58%;
+    flex-direction: row;
+  }
+  .technology__menu {
+    flex-direction: column;
+    gap: 4vh;
+  }
+  .technology__menu-item {
+    width: 5.5vw;
+  }
+  .technology__text {
+    width: 75%;
+    align-items: flex-start;
+  }
+  .technology__text-description {
+    text-align: left;
+  }
+  .technology__illustration {
+    height: 100%;
+    width: 42%;
+  }
+}
 .nav {
   display: flex;
   height: 12vh;

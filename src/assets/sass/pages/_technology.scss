@@ -29,7 +29,8 @@
         @include flexbox(90%, auto);
     }
 
-    &__explanation {@include flexbox(100%, 58%, row, space-between);
+    &__explanation {
+        @include flexbox(100%, 58%, row, space-between);
     }
 
     &__menu {
@@ -210,5 +211,51 @@
 @media (max-width: 355px) {
     .technology {
         min-height: 125vh;
+    }
+}
+
+@media (max-width: 940px) and (orientation: landscape) {
+    .technology {
+        &__content {
+            height: 77%;
+            width: 85%;
+            justify-content: flex-start;
+            gap: 5vh;
+        }
+
+        &__info {
+            height: 80%;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        &__explanation {
+            height: 100%;
+            width: 58%;
+            flex-direction: row;
+        }
+
+        &__menu {
+            flex-direction: column;
+            gap: 4vh; 
+
+            &-item {
+                width: 5.5vw;
+            }
+        }
+
+        &__text {
+            width: 75%;
+            align-items: flex-start;
+
+            &-description {
+                text-align: left;
+            }
+        }
+
+        &__illustration {
+            height: 100%;
+            width: 42%;
+        }
     }
 }
